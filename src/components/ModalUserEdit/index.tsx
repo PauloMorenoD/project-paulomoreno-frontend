@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { userContext } from "../../context/userContext";
 import { Input } from "../Input";
-import { DivComp } from "../ModalCreateDepartment/styled";
-import { DivInput } from "./styled";
+import { DivComp } from "../ModalCreateDepartment/styles";
+import { DivInput } from "./styles";
 
 type iHandleSubmitValues = {
     name?: string

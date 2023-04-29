@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Header } from "../../components/Header";
 import { companieContext } from "../../context/companieProvider";
 import { userContext } from "../../context/userContext";
-import { DivComp } from "./style";
+import { DivComp } from "./styles";
 import { DepartmentsCard } from "../../components/DepartmentsCards";
 import { UserCard } from "../../components/UserCards";
 import { Modal } from "../../components/Modal";

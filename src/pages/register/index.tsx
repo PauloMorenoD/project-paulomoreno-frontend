@@ -6,14 +6,19 @@ import { Input } from "../../components/Input";
 import { userContext } from "../../context/userContext";
 import { iRegisterUser } from "../../context/userContext/types";
 import { ButtonLogin } from "../home/styles";
-import { DivComp, Main, Span } from "./styles";
+import { registerSchema } from "./schema";
+import { DivComp, Main } from "./styles";
+import { yupResolver } from '@hookform/resolvers/yup'
 
 export const RegisterPage = () => {
   const [buttons, setButtons] = useState<boolean>(true)
   const [isVisible, setIsVisible] = useState<boolean>(false)
   { isVisible ? <AiFillEyeInvisible onClick={() => setIsVisible(!isVisible)} /> : <AiFillEye onClick={() => setIsVisible(!isVisible)} /> }
 
-  const { register, handleSubmit } = useForm<iRegisterUser>({})
+  const { register, handleSubmit, formState:{errors} } = useForm<iRegisterUser>({
+    resolver: yupResolver(registerSchema)
+  })
+
 
   const { registerUser } = useContext(userContext)
 
@@ -36,25 +41,30 @@ export const RegisterPage = () => {
               <label htmlFor="">E-mail</label>
               <Input placeholder="Digite um e-mail..." name="email" register={register} type="email" />
             </div>
+            {errors.email?.message && <span>{errors.email.message}</span>}
             <div>
               <label htmlFor="">Nome</label>
               <Input placeholder="Digite um nome..." name="name" register={register} type="text" />
             </div>
-            <div>
+            {errors.name?.message && <span>{errors.name.message}</span>}
+            <div className="div-password">
               <label htmlFor="">Senha</label>
               <div className="input-view-or-not">
-                <Input placeholder="Digite uma senha..." name="password" register={register} type={isVisible?"text":"password"} />
+                <Input placeholder="Digite uma senha..." name="password" register={register} type={ isVisible ? "text" : "password"} />
                 {isVisible ? <AiFillEyeInvisible onClick={()=>setIsVisible(!isVisible)}/> : <AiFillEye  onClick={()=>setIsVisible(!isVisible)} />}
               </div>
+              {errors.password?.message && <span>{errors.password.message}</span>}
             </div>
             <div>
               <label htmlFor="">Modelo de trabalho</label>
               <Input placeholder="Sua modalidade de trabalho" name="kind_of_work" register={register} type="text" />
             </div>
+            {errors.kind_of_work?.message && <span>{errors.kind_of_work.message}</span>}
             <div>
               <label htmlFor="">Nível profissional</label>
               <Input placeholder="o seu nível profissional" name="professional_level" register={register} type="text" />
             </div>
+            {errors.professional_level?.message && <span>algo deu errado</span>}
             <button className="blue-button">Cadastrar-se</button>
           </form>
         </div>

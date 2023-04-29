@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { userContext } from "../../context/userContext";
-import { DivComp } from "../ModalCreateDepartment/styled";
+import { DivComp } from "../ModalCreateDepartment/styles";
 import { useForm } from "react-hook-form";
 import { companieContext } from "../../context/companieProvider";
 

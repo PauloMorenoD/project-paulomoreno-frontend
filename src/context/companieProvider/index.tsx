@@ -23,7 +23,7 @@ export const CompanieProvider = ({ children }: iCompanieProviderProps) => {
   const [userName, setUserName] = useState<string>('')
   const [allUsers, setAllUsers] = useState<iUser[]>([])
   const [userId, setUserId] = useState<number>(0)
-  const[department, setDepartment] = useState<iDepartment[]>([])
+  const [department, setDepartment] = useState<iDepartment[]>([])
 
   const { setAllUsersHired } = useContext(userContext)
 
@@ -52,15 +52,15 @@ export const CompanieProvider = ({ children }: iCompanieProviderProps) => {
     const getAllUsers = async () => {
 
       const response = await axiosFetch.get("/users")
-      
+
       const data = response.data
-      
+
       setAllUsers(data)
     }
     getAllUsers()
-    
+
   }, [])
-  
+
 
   const getCompaniesFromSector = (name: string) => {
 
@@ -141,9 +141,9 @@ export const CompanieProvider = ({ children }: iCompanieProviderProps) => {
 
   }
 
-  const modalDepartHireWorker = async (id:number) => {
+  const modalDepartHireWorker = async (id: number) => {
     const department = companieDepartments.filter(depart => depart.id == id)
-    
+
     setDepartment(department)
   }
 
@@ -176,8 +176,8 @@ export const CompanieProvider = ({ children }: iCompanieProviderProps) => {
       axiosFetch.defaults.headers.authorization = `Bearer ${token}`
 
       const response = await axiosFetch.patch("/users/" + userId, data)
-      const userRes:iUser = response.data
-      setCompanieUsers((old)=>[...old, userRes])
+      const userRes: iUser = response.data
+      setCompanieUsers((old) => [...old, userRes])
 
       toast.success("usuário editado!")
     } catch (error) {
@@ -185,7 +185,7 @@ export const CompanieProvider = ({ children }: iCompanieProviderProps) => {
       toast.error('Ops, algo deu errado')
     }
   }
-  const AdminDeleteUser = async (id:number) => {
+  const AdminDeleteUser = async (id: number) => {
 
     try {
       axiosFetch.defaults.headers.authorization = `Bearer ${token}`
@@ -217,7 +217,7 @@ export const CompanieProvider = ({ children }: iCompanieProviderProps) => {
       departId,
       userName,
       userId,
-      department, 
+      department,
       setCompaniesPerSector,
       getCompaniesFromSector,
       setCompanieDepartments,

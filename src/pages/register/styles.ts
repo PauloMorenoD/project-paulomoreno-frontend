@@ -33,7 +33,7 @@ export const Main = styled.main`
     background-size:cover;
     background-position:center;
     width:100%;
-    height: calc(100vh - 81px);
+    height:  calc(100vh - 50px) ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +43,8 @@ export const Main = styled.main`
         flex-direction: column;
         width:90%;
         max-width: 30rem;
+        height: 100%;
+        margin-top:2rem ;
     }
     
     form{
@@ -58,11 +60,17 @@ export const Main = styled.main`
         h2{
             font-weight:bold;
         }
+        .div-password{
+            span{                
+                margin: .5rem 0 0 0;
+            } 
+        }
 
         .input-view-or-not{
             flex-direction: row;
             align-items:center;
             border:1px solid var(--gray-200);
+
             input{
                 border:none;
                 flex:1;
@@ -70,7 +78,9 @@ export const Main = styled.main`
             }
             svg{
                 font-size:1rem;
+                margin-right:.2rem;
             }
+
         }
         
         div{
@@ -96,6 +106,11 @@ export const Main = styled.main`
         p{
             font-size:.8rem;
             align-self: center;
+        }
+        span{
+            font-size:.8rem;
+            color:var(--primary-red);
+            margin-top:-.5rem;
         }
         
     }

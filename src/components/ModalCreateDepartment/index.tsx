@@ -4,7 +4,7 @@ import { Options } from "../CompanieOptions"
 import { useForm } from "react-hook-form";
 import { Input } from "../Input";
 import { userContext } from "../../context/userContext";
-import { DivComp } from "./styled";
+import { DivComp } from "./styles";
 
 
 export const ModalCreateDepartment = () => {
