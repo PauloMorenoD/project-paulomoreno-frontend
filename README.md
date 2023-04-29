@@ -31,3 +31,5 @@ para ter acesso às features de uzuário, basta criar um usuário e fazer login 
 }
 
 Este projeto é meio que uma re-leitura de um projeto que eu já fiz no curso de fullstack, eu tinha feito em javascript puro mas aquele projeto caiu eu desuso por que a api não está mais disponível. Então eu tive que criar a api para este aqui que foi feito rem react.js, com typescript e styled-components, utilizando contextApi do react, e bibliotecas como react-hook-form, yup, react-router-dom, axios e react-toastify.
+
+LEMBRANDO QUE POR SER UMA API DEPLOYADA GRATUITAMENTE, ELA PODE DEMORAR UM POUCO PRA CARREGAR E COMEÇAR A FUNCIONAR, ENTÃO UMA DICA QUE EU DOU PRA SABER SE A APLICAÇÃO JA ESTÁ FUNCIONANDO, É VERIFICAR NA PÁGINA HOME SE O SELECT CARREGOU AS OPÇÕES, SE SIM, PODE COMEÇAR A UTILIZAR!!
