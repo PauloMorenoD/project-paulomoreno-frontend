@@ -1,4 +1,4 @@
-import { SectionComp } from "./style";
+import { SectionComp } from "./styles";
 
 type iModalProps = {
     children: React.ReactNode

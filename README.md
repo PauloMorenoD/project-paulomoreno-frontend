@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+Este projeto contém features na admin page, e user page, para ter acesso à admin page, utilize o usuário:{
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    email: admin2@mail.com,
+    password: admin2
+}
+ features da página de admin:{ 
 
-## Available Scripts
+ - criar departamentos de uma companhia,
+ - ver os usuários de uma determinada companhia
+ - ver os usuários de um edterminado departamento
+ - vizualizar todos os usuários de um departamento
+ - contratar um usuário para um departamento (feito, mas aberto a sujestões e idéias para melhora)
+ - demitir um determinado funcionário de um departamento (feito, mas aberto a sujestões e idéias para melhora)
+ - editar o nível profissional e a modalidade de trabalho de um usuário
 
-In the project directory, you can run:
+    features para serem implementadas:{
+        - deleção de um determinado departamento e demissão seus usuários
+        - edição de um determinado departamento e seus usuários
+        - criação, edição e deleção de companhias
+    }  
+ }
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+para ter acesso às features de uzuário, basta criar um usuário e fazer login com ele {
+    features da página de usuário comum:{
+        - ler seus dados
+        - ver todos os usuários do mesmo departamento
+        - editar seu email, senha e nome
+    }
+}
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este projeto é meio que uma re-leitura de um projeto que eu já fiz no curso de fullstack, eu tinha feito em javascript puro mas aquele projeto caiu eu desuso por que a api não está mais disponível. Então eu tive que criar a api para este aqui que foi feito rem react.js, com typescript e styled-components, utilizando contextApi do react, e bibliotecas como react-hook-form, yup, react-router-dom, axios e react-toastify.

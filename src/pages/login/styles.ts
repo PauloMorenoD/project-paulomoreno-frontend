@@ -61,6 +61,7 @@ export const Main = styled.main`
             flex-direction: row;
             align-items:center;
             border:1px solid var(--gray-200);
+            margin-bottom: 1rem;
             input{
                 border:none;
                 flex:1;
@@ -89,6 +90,10 @@ export const Main = styled.main`
         p{
             font-size:.8rem;
             align-self: center;
+        }
+        span{
+            font-size:.8rem;
+            color:var(--primary-red);
         }
         
     }
